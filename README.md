@@ -1,4 +1,4 @@
-# Fan Control
+# Integrated Project - Fan Control
 
 This repository gathers the materials developed for the Integrated Project of the Control Theory 2 and Microcontrollers course (2023.2), carried by students Jonas and Vinícius Bauer.
 The project involves implementing a discrete control for a fan using a microcontroller, applying both PI and PID controllers.
@@ -21,30 +21,37 @@ The controllers were validated through simulations in Simulink. A set of blocks 
 
 ## Repository Structure
 
-- **/src/rotation_control.c**  
-  Contains the C source code that implements the fan control. Key features include:
-  - Configuration of timers, the AD converter, PWM, LCD, and keypad.
-  - Implementation of a Human-Machine Interface (HMI) based on a state machine, which allows for setting the setpoint and selecting between the PI and PID controllers.
-  - A control routine that updates the speed parameters and duty cycle by integrating the discrete control equations.
+- **/control_project/conversion.xlsx**  
+  Excel file containing data or conversion parameters used during the project’s development.
 
-- **/docs/rotation_control.pdf**  
+- **/control_project/IHMBauer.pdf**  
+  Document providing an overview or reference for the Human-Machine Interface (HMI) design.
+
+- **/control_project/rotation_control.c**  
+  The main C source code implementing the fan control. Key features include:
+  - Configuration of timers, the AD converter, PWM, LCD, and keypad.
+  - A state machine-based HMI for setpoint configuration and selection of PI or PID controllers.
+  - A control routine that updates speed and duty cycle by integrating the discrete control equations.
+
+- **/control_project/rotation_control.m**  
+  A MATLAB/Octave script used for system analysis or simulation, supporting the design and validation of the controllers.
+
+- **/control_project/rotation_control.pdf**  
   A detailed document outlining the methodology used, including:
   - The experimental procedure for plant identification.
   - Derivation and comparison of the continuous and discretized transfer functions.
-  - Analyses of the performances of the PI and PID controllers, along with their respective *Settling Time* and *Overshoot*.
-
-- **/docs/IHMbauer.pdf**  
-  An illustrative diagram of the state machine implemented in the HMI, showing the various screens and user interactions.
-
-- **/docs/simulink_blocks.png**  
-  Images of the blocks used in Simulink for plant simulation and controller validation.
+  - Performance analyses of the PI and PID controllers, highlighting *Settling Time* and *Overshoot*.
 
 ## How to Use the Project
 
 1. **Source Code:**  
-   - Navigate to the `/src` folder and open the `rotation_control.c` file to review the complete control implementation.
-   - Compile the code and program the microcontroller according to the instructions and comments provided within the file.
+   - Navigate to the `/control_project` folder and open `rotation_control.c` to review the complete control implementation.
+   - Compile the code and program the microcontroller according to the instructions and comments within the file.
 
-2. **Documentation:**  
-   - Refer to the `rotation_control.pdf` file in the `/docs` folder to gain a detailed understanding of the experimental procedures, plant identification, and controller analysis.
-   - View the diagrams `IHMbauer.pdf` and `rotation_control.pdf` to understand the structure of the HMI and the modeling performed in Simulink.
+2. **Documentation and Scripts:**  
+   - Refer to `rotation_control.pdf` for a comprehensive explanation of the experimental procedures, plant identification, and controller analysis.
+   - Use `rotation_control.m` to replicate or extend the simulations and analyses performed in MATLAB/Octave.
+   - Check `IHMbauer.pdf` for insights into the HMI design and implementation details.
+
+3. **Data Files:**  
+   - Examine `conversion.xlsx` if you need to review or modify the data/conversion parameters used in the project.
