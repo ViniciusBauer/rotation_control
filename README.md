@@ -1,6 +1,6 @@
 # Integrated Project - Fan Control
 
-This repository gathers the materials developed for the Integrated Project of the Control Theory 2 and Microcontrollers course (2023.2), carried by students Jonas and Vinícius Bauer.
+This repository gathers the materials developed for the Integrated Project of the Control Theory 2 and Microcontrollers course (2023.2), carried by students Jonas and Vinícius.
 The project involves implementing a discrete control for a fan using a microcontroller, applying both PI and PID controllers.
 
 ## Project Description
